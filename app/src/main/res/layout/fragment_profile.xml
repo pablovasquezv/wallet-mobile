@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profile.ProfileFragment">
+
+    <ImageView
+        android:id="@+id/imageview_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:src="@drawable/icon_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fab_horizontal_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="Reem Khaled"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageview_profile" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_information"
+        style="@style/ButtonTertiary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fab_horizontal_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:drawableStart="@drawable/icon_profile"
+        android:drawableEnd="@drawable/icon_arrow"
+        android:paddingHorizontal="@dimen/fab_margin"
+        android:text="@string/action_information"
+        app:layout_constraintTop_toBottomOf="@id/textview_name" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_cards"
+        style="@style/ButtonTertiary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fab_horizontal_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:drawableStart="@drawable/icon_card"
+        android:drawableEnd="@drawable/icon_arrow"
+        android:paddingHorizontal="@dimen/fab_margin"
+        android:text="@string/action_cards"
+        app:layout_constraintTop_toBottomOf="@id/button_information" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_settings"
+        style="@style/ButtonTertiary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fab_horizontal_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:drawableStart="@drawable/icon_settings"
+        android:drawableEnd="@drawable/icon_arrow"
+        android:paddingHorizontal="@dimen/fab_margin"
+        android:text="@string/action_settings"
+        app:layout_constraintTop_toBottomOf="@id/button_cards" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_help"
+        style="@style/ButtonTertiary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fab_horizontal_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:drawableStart="@drawable/icon_help"
+        android:drawableEnd="@drawable/icon_arrow"
+        android:paddingHorizontal="@dimen/fab_margin"
+        android:text="@string/action_help"
+        app:layout_constraintTop_toBottomOf="@id/button_settings" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

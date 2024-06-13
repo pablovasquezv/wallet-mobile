@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_hi"
+        style="@style/TextInverse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/extra_margin"
+        app:layout_constraintBottom_toTopOf="@id/textview_balance_label"
+        tools:text="¡Hola Amanda!" />
+
+    <TextView
+        android:id="@+id/textview_balance_label"
+        style="@style/TextInverse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:text="@string/home_balance"
+        app:layout_constraintBottom_toTopOf="@id/textview_balance" />
+
+    <TextView
+        android:id="@+id/textview_balance"
+        style="@style/TextInverse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        tools:text="$124.57" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_send_money"
+        style="@style/ButtonSecondary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/extra_margin"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:drawableStart="@drawable/icon_send"
+        android:paddingHorizontal="@dimen/fab_margin"
+        android:text="@string/action_send_money"
+        app:layout_constraintEnd_toStartOf="@id/button_request_money"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_request_money"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/extra_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:drawableStart="@drawable/icon_request"
+        android:paddingHorizontal="@dimen/fab_margin"
+        android:text="@string/action_request_money"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_send_money"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/textview_last_transactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:text="@string/home_transactions_last"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_request_money" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_transactions"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/fab_margin"
+        android:layout_marginVertical="@dimen/small_margin"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_last_transactions"
+        tools:listitem="@layout/recycler_transaction_item"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textview_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/fab_margin"
+        android:gravity="center"
+        android:text="@string/home_transactions_empty"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_last_transactions" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/blue"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
