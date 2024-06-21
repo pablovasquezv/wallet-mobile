@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.alkemy.alkewallet.home.HomeFragment"
+        android:name="com.alkemy.alkewallet.ui.view.fragment.home.HomeFragment"
         android:label=""
         tools:layout="@layout/fragment_home">
 
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/requestMoneyFragment"
-        android:name="com.alkemy.alkewallet.requestmoney.RequestMoneyFragment"
+        android:name="com.alkemy.alkewallet.ui.view.fragment.requestmoney.RequestMoneyFragment"
         android:label="@string/request_money_title"
         tools:layout="@layout/fragment_request_money">
         <action
@@ -35,7 +35,7 @@
 
     <fragment
         android:id="@+id/sendMoneyFragment"
-        android:name="com.alkemy.alkewallet.sendmoney.SendMoneyFragment"
+        android:name="com.alkemy.alkewallet.ui.view.fragment.sendmoney.SendMoneyFragment"
         android:label="@string/send_money_title"
         tools:layout="@layout/fragment_send_money">
         <action
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.alkemy.alkewallet.profile.ProfileFragment"
+        android:name="com.alkemy.alkewallet.ui.view.fragment.profile.ProfileFragment"
         android:label="@string/profile_title"
         tools:layout="@layout/fragment_profile" />
 </navigation>
